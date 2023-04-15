@@ -4,8 +4,8 @@ import CardHead from './CardHead';
 import CardBody from './CardBody';
 import { Box, Button } from '@primer/react';
 import { TfiCommentAlt } from 'react-icons/tfi';
-import { serialize } from 'next-mdx-remote/serialize'
-import { MDXRemote } from 'next-mdx-remote'
+//import { serialize } from 'next-mdx-remote/serialize'
+//import { MDXRemote } from 'next-mdx-remote'
 
 //import CardBody from '../components/test'
 
@@ -25,10 +25,11 @@ export default function FeedCard({data}) {
             </Box>
             <Box sx={{ width: '80%', p: 3, color: 'white', position:'relative', paddingBottom:'10%'}}>
                 <CardHead data={{ name, username, time }} />
-                <MDXRemote {...text} components={components} />
                 {
-                    //<CardBody text={text} />
+                    //<MDXRemote {...text} components={components} />
                 }
+                <CardBody text={text} />
+                
                 
                 <Button sx={{background:'#FFC700', color:'black', position:'absolute', bottom:'2.32%', right:'8.82%', background:'#FFC700'}} leadingIcon={TfiCommentAlt}>Default</Button>
             </Box>

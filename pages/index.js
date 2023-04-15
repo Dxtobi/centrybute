@@ -21,7 +21,7 @@ export default function Home({data}) {
 export async function getServerSideProps(ctx) {
 
   //putting this in a different util file would result to error
-  async function cleanData(arr) { 
+ /* async function cleanData(arr) { 
     const editedData = await Promise.all(
       arr.map(async (item) => {
         const editedItem = { ...item };
@@ -32,9 +32,9 @@ export async function getServerSideProps(ctx) {
 
     return editedData;
 }
+  */
   
-  
-  const newData = await cleanData(fakedb);
+ // const newData = await cleanData(fakedb);
   //console.log(newData)
-  return { props: { data: newData } }
+  return { props: { data: fakedb } }
 }
